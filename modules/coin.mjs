@@ -1,3 +1,4 @@
+// NOTE: .mjs extension identifies it as a module, but can also just be .js.
 /** Coin flip functions 
  * This module will emulate a coin flip given various conditions as parameters as defined below
  */
@@ -15,7 +16,16 @@
  */
 
 function coinFlip() {
+  let result;
+  let flip = Math.random();
 
+  if (flip < 0.5) {
+    result = "heads";
+  } else {
+    result = "tails";
+  }
+
+  return result;
 }
 
 /** Multiple coin flips
@@ -38,6 +48,13 @@ function coinFlip() {
  */
 
 function coinFlips(flips) {
+  let coinArray = [];
+
+  for (let i = 0; i < flips; i++) {
+    coinArray[i] = coinFlip();
+  }
+
+  return coinArray;
 
 }
 
@@ -55,6 +72,21 @@ function coinFlips(flips) {
  */
 
 function countFlips(array) {
+  let tailsCount = 0;
+  let headsCount = 0;
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] == 'heads') {
+      headsCount++;
+    } else {
+      tailsCount++;
+    }
+  }
+
+  return {
+    'tails': tailsCount,
+    'heads': headsCount
+  };
 
 }
 
@@ -70,6 +102,19 @@ function countFlips(array) {
  */
 
 function flipACoin(call) {
+  let result;
+  let flip = coinFlip();
+  if (call == flip) {
+    result = 'win';
+  } else {
+    result = 'lose';
+  }
+
+  return {
+    'call': call,
+    'flip': flip,
+    'result': result
+  };
 
 }
 
@@ -78,3 +123,4 @@ function flipACoin(call) {
  * 
  * Export all of your named functions
 */
+export { coinFlip, coinFlips, countFlips, flipACoin };
