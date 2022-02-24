@@ -49,8 +49,9 @@ function coinFlip() {
 
 function coinFlips(flips) {
   let coinArray = [];
+  let flipArray = new Array(flips);
 
-  for (let i = 0; i < flips.length; i++) {
+  for (let i = 0; i < flipArray.length; i++) {
     coinArray[i] = coinFlip();
   }
 
