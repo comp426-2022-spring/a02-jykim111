@@ -1,8 +1,7 @@
 import * as coin from "./modules/coin.mjs";
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
+import minimist from "minimist";
 
-const args = require('minimist')(process.argv.slice(2));
+const args = minimist(process.argv.slice(2));
 args['number'];
 const number = args.number;
 
@@ -15,7 +14,7 @@ if (number == null) {
         console.log('{ tails: 1 }');
     }
 } else {
-    let randomFlip = coin.coinFlips(number);
+    let randomFlip = coin.coinFlips(number).toString().replace(/\n|\r/g, "");
     console.log(randomFlip);
     console.log(coin.countFlips(randomFlip));
 }
