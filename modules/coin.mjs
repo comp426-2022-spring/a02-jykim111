@@ -52,10 +52,10 @@ function coinFlips(flips) {
   let flipArray = Array.apply(null, Array(flips));
 
   for (let i = 0; i < flipArray.length; i++) {
-    coinArray[i] = coinFlip();
+    flipArray[i] = coinFlip();
   }
 
-  return coinArray;
+  return flipArray;
 
 }
 
