@@ -14,7 +14,7 @@ if (number == null) {
         console.log('{ tails: 1 }');
     }
 } else {
-    let randomFlip = coin.coinFlips(number).toString().replace(/\n|\r/g, "");
+    let randomFlip = coin.coinFlips(number);
     console.log(randomFlip);
     console.log(coin.countFlips(randomFlip));
 }
