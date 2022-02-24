@@ -50,9 +50,8 @@ function coinFlip() {
 function coinFlips(flips) {
   let coinArray = [];
 
-  for (let i = 0; i < flips; i++) {
+  for (let i = 0; i < flips.length; i++) {
     coinArray[i] = coinFlip();
-    coinArray[i] = coinArray[i].replace(/(\r\n|\n|\r)/gm, "");
   }
 
   return coinArray;
