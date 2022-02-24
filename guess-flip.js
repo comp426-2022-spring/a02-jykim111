@@ -7,7 +7,7 @@ args['call'];
 
 const call = args.call;
 
-if (call == null) {
+if (call == null || call == "" || call != 'tails' || call != 'heads') {
     console.log("Error: no input.");
     console.log("Usage: node guess-flip --call=[head|tails]");
 } else {
