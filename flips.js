@@ -8,7 +8,7 @@ const number = args.number;
 
 if (number == null) {
     let flip = coin.coinFlips(1);
-
+    console.log(flip);
     if (flip == ['heads']) {
         console.log('{ heads: 1 }');
     } else {
