@@ -15,7 +15,7 @@ if (number == null) {
         console.log('{ tails: 1 }');
     }
 } else {
-    let flip = coin.coinFlips(number);
-    console.log(flip);
-    console.log(coin.countFlips(flip));
+    let randomFlip = coin.coinFlips(number);
+    console.log(randomFlip);
+    console.log(coin.countFlips(randomFlip));
 }
