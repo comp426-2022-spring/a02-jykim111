@@ -117,7 +117,6 @@ function flipACoin(call) {
 
 }
 
-
 /** Export 
  * 
  * Export all of your named functions
