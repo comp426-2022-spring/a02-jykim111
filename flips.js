@@ -16,6 +16,5 @@ if (number == null) {
 } else {
     let randomFlip = coin.coinFlips(number);
     console.log(JSON.stringify(randomFlip));
-    // console.dir(randomFlip, { 'maxArrayLength': null });
     console.log(coin.countFlips(randomFlip));
 }
